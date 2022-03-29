@@ -34,7 +34,7 @@ struct ProductCard: View {
             
             VStack(alignment: .leading) {
                 Text(textString ?? "")
-                    .font(.system(size: 26, weight: .bold, design: .default))
+                    .font(.system(size: 14, weight: .bold, design: .default))
                     .foregroundColor(.black)
                 
                 

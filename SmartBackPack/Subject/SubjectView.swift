@@ -27,6 +27,9 @@ struct SubjectView: View {
                         VStack(alignment: .center, spacing: 20) {
                             
                             Spacer()
+                            Text("Add Books")
+                                .foregroundColor(Color.gray)
+                                .font(.largeTitle)
                             
                             CustomLabelAndNotEditableTextField(labelTxt:"Name", valueText: $vm.name)
                             CustomLabelAndNotEditableTextField(labelTxt:"QR", valueText: $vm.qrCode)

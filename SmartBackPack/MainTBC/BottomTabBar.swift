@@ -54,39 +54,28 @@ struct BottomTabBar: View {
         NavigationView {
             
             TabView {
-                
-                HomeView()
+              
+                SubjectView()
                     .tabItem {
                         
                         Image("home")
-                        Text("Home")
+                        Text("Book")
                     }
                 
+                DaysVC()
+                    .tabItem {
+                        
+                        Image("home")
+                        Text("Time Table")
+                    }
                 
-                if isAuthenticated {
-                    
-                    BookingView()
-                        .tabItem {
-                            Image("parking")
-                            Text("Bookings")
-                        }
-                    
-                    ProfileView()
-                        .tabItem {
-                            Image("settings")
-                            Text("Settings")
-                        }
-                    
-                    
-                }else{
-                    
-                    AboutUs()
-                        .tabItem {
-                            Image("description")
-                            Text("About Us")
-                        }
-                }
-                
+                MoreView()
+                    .tabItem {
+                        
+                        Image("home")
+                        Text("more")
+                    }
+
                 
             }//:TabView
             .onReceive(Authenticated, perform: {

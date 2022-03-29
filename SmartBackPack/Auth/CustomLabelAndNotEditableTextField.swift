@@ -21,7 +21,7 @@ struct CustomLabelAndNotEditableTextField: View {
                 Spacer()
             }
             CustomTextField(placeHolder: labelTxt ?? "", valueText: $valueText)
-                .disabled(false)
+                .disabled(true)
         }
     }
 }

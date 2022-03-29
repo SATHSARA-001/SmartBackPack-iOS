@@ -11,9 +11,7 @@ import RappleProgressHUD
 struct ProfileView: View {
     
     @StateObject var vm = ProfileVM()
-    
-    
-    
+
     @State var isLogoutSuccess = false
     
     
@@ -31,15 +29,14 @@ struct ProfileView: View {
                             
                             Spacer()
                             
+                            
+                            Image("Logo")
+                                .resizable()
+                                .frame(width: 200, height: 100)
+                            
                             CustomLabelAndNotEditableTextField(labelTxt:"Name", valueText: $vm.name)
                             CustomLabelAndNotEditableTextField(labelTxt:"Email", valueText: $vm.email)
-                            CustomLabelAndNotEditableTextField(labelTxt:"NIC", valueText: $vm.nic)
-                            CustomLabelAndNotEditableTextField(labelTxt:"Contact Number", valueText: $vm.contactNumber)
-                            CustomLabelAndNotEditableTextField(labelTxt:"Register Number", valueText: $vm.regNo)
-                            CustomLabelAndNotEditableTextField(labelTxt:"Vehicle Number", valueText: $vm.vehicleNo)
-                            
-                            
-                      
+
                                 Button(action: {
                                     
                                     vm.logOutCurrentUser { success in
