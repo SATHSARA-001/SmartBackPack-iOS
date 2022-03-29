@@ -249,11 +249,13 @@
 			isa = PBXGroup;
 			children = (
 				6E19730327F320B800BE9542 /* GoogleService-Info.plist */,
+				8CA6850827413E0000405DE9 /* Assets.xcassets */,
+				8CA6850A27413E0000405DE9 /* Preview Content */,
+				8CAEA9A32742B60E005AC5EE /* App */,
+				8CAFF1E02742240600969B52 /* Shared */,
 				8CAFF1E5274228FB00969B52 /* View+ViewModel  */,
 				8C98AC3A2744BC0D00AD9D53 /* Model */,
 				8CAFF1DD274213F100969B52 /* Util */,
-				8CA6850827413E0000405DE9 /* Assets.xcassets */,
-				8CA6850A27413E0000405DE9 /* Preview Content */,
 			);
 			path = SmartBackPack;
 			sourceTree = "<group>";
@@ -344,8 +346,6 @@
 				6EA0D83F27F37A520096D348 /* Reminder */,
 				6E58C28B27F3740900B89341 /* TimeTable */,
 				6E58C28627F364A500B89341 /* Subject */,
-				8CAEA9A32742B60E005AC5EE /* App */,
-				8CAFF1E02742240600969B52 /* Shared */,
 				8CA6851427414C3800405DE9 /* Auth */,
 				8CAFF1ED27422A9D00969B52 /* Profile */,
 				8C98AC3E27456EC600AD9D53 /* MainTBC */,
