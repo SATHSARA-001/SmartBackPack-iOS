@@ -11,6 +11,7 @@
 		6CDDA7FD4A28E268EF0CE390 /* Pods_SmartBackPack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57140CF12C1A07AD6B41F2BB /* Pods_SmartBackPack.framework */; };
 		6E19730427F320B800BE9542 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E19730327F320B800BE9542 /* GoogleService-Info.plist */; };
 		6E58C28827F364E900B89341 /* SubjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E58C28727F364E900B89341 /* SubjectView.swift */; };
+		6E58C28A27F36C7600B89341 /* SubjectVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E58C28927F36C7600B89341 /* SubjectVM.swift */; };
 		8C0814BB274430E400E62CB3 /* ForgotPasswordVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0814BA274430E400E62CB3 /* ForgotPasswordVM.swift */; };
 		8C0814BD2744354D00E62CB3 /* SignUpVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0814BC2744354D00E62CB3 /* SignUpVM.swift */; };
 		8C1921F9274A32CA0086EC3B /* ReservedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1921F8274A32CA0086EC3B /* ReservedListView.swift */; };
@@ -76,6 +77,7 @@
 		610F2E18CD89AC61C28FB6F0 /* Pods_SmartBackPack_SmartBackPackUITesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartBackPack_SmartBackPackUITesting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E19730327F320B800BE9542 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6E58C28727F364E900B89341 /* SubjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectView.swift; sourceTree = "<group>"; };
+		6E58C28927F36C7600B89341 /* SubjectVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectVM.swift; sourceTree = "<group>"; };
 		78103444A4BE1214BD105519 /* Pods-SmartBackPack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartBackPack.release.xcconfig"; path = "Target Support Files/Pods-SmartBackPack/Pods-SmartBackPack.release.xcconfig"; sourceTree = "<group>"; };
 		8C0814BA274430E400E62CB3 /* ForgotPasswordVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVM.swift; sourceTree = "<group>"; };
 		8C0814BC2744354D00E62CB3 /* SignUpVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVM.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				6E58C28727F364E900B89341 /* SubjectView.swift */,
+				6E58C28927F36C7600B89341 /* SubjectVM.swift */,
 			);
 			path = Subject;
 			sourceTree = "<group>";
@@ -579,6 +582,7 @@
 				8CAEA98927429801005AC5EE /* BookingView.swift in Sources */,
 				6E58C28827F364E900B89341 /* SubjectView.swift in Sources */,
 				8CAFF1E32742244500969B52 /* CustomHeader.swift in Sources */,
+				6E58C28A27F36C7600B89341 /* SubjectVM.swift in Sources */,
 				8CAEA9932742B2EA005AC5EE /* LoginVM.swift in Sources */,
 				8CAEA9A92742BFBE005AC5EE /* LocalUser.swift in Sources */,
 				8C98AC402747E79200AD9D53 /* LocationManager.swift in Sources */,
