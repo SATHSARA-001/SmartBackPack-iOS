@@ -12,6 +12,10 @@
 		6E19730427F320B800BE9542 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E19730327F320B800BE9542 /* GoogleService-Info.plist */; };
 		6E58C28827F364E900B89341 /* SubjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E58C28727F364E900B89341 /* SubjectView.swift */; };
 		6E58C28A27F36C7600B89341 /* SubjectVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E58C28927F36C7600B89341 /* SubjectVM.swift */; };
+		6E58C28D27F3743700B89341 /* AddTimeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E58C28C27F3743700B89341 /* AddTimeTableView.swift */; };
+		6E58C28F27F3751200B89341 /* AddTimeTableVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E58C28E27F3751200B89341 /* AddTimeTableVM.swift */; };
+		6EA0D84127F37A6A0096D348 /* ReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA0D84027F37A6A0096D348 /* ReminderView.swift */; };
+		6EA0D84427F37A800096D348 /* ReminderVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA0D84327F37A800096D348 /* ReminderVM.swift */; };
 		8C0814BB274430E400E62CB3 /* ForgotPasswordVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0814BA274430E400E62CB3 /* ForgotPasswordVM.swift */; };
 		8C0814BD2744354D00E62CB3 /* SignUpVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0814BC2744354D00E62CB3 /* SignUpVM.swift */; };
 		8C1921F9274A32CA0086EC3B /* ReservedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1921F8274A32CA0086EC3B /* ReservedListView.swift */; };
@@ -78,6 +82,10 @@
 		6E19730327F320B800BE9542 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6E58C28727F364E900B89341 /* SubjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectView.swift; sourceTree = "<group>"; };
 		6E58C28927F36C7600B89341 /* SubjectVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectVM.swift; sourceTree = "<group>"; };
+		6E58C28C27F3743700B89341 /* AddTimeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTimeTableView.swift; sourceTree = "<group>"; };
+		6E58C28E27F3751200B89341 /* AddTimeTableVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTimeTableVM.swift; sourceTree = "<group>"; };
+		6EA0D84027F37A6A0096D348 /* ReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderView.swift; sourceTree = "<group>"; };
+		6EA0D84327F37A800096D348 /* ReminderVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderVM.swift; sourceTree = "<group>"; };
 		78103444A4BE1214BD105519 /* Pods-SmartBackPack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartBackPack.release.xcconfig"; path = "Target Support Files/Pods-SmartBackPack/Pods-SmartBackPack.release.xcconfig"; sourceTree = "<group>"; };
 		8C0814BA274430E400E62CB3 /* ForgotPasswordVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVM.swift; sourceTree = "<group>"; };
 		8C0814BC2744354D00E62CB3 /* SignUpVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVM.swift; sourceTree = "<group>"; };
@@ -88,7 +96,7 @@
 		8C98AC382744BB3A00AD9D53 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
 		8C98AC3B2745394B00AD9D53 /* Booking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Booking.swift; sourceTree = "<group>"; };
 		8C98AC3F2747E79200AD9D53 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
-		8CA6850127413DFF00405DE9 /* NIBM Parking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NIBM Parking.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CA6850127413DFF00405DE9 /* Smart BackPack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart BackPack.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CA6850427413DFF00405DE9 /* NIBMParkingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NIBMParkingApp.swift; sourceTree = "<group>"; };
 		8CA6850627413DFF00405DE9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8CA6850827413E0000405DE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -168,6 +176,24 @@
 			path = Subject;
 			sourceTree = "<group>";
 		};
+		6E58C28B27F3740900B89341 /* TimeTable */ = {
+			isa = PBXGroup;
+			children = (
+				6E58C28C27F3743700B89341 /* AddTimeTableView.swift */,
+				6E58C28E27F3751200B89341 /* AddTimeTableVM.swift */,
+			);
+			path = TimeTable;
+			sourceTree = "<group>";
+		};
+		6EA0D83F27F37A520096D348 /* Reminder */ = {
+			isa = PBXGroup;
+			children = (
+				6EA0D84027F37A6A0096D348 /* ReminderView.swift */,
+				6EA0D84327F37A800096D348 /* ReminderVM.swift */,
+			);
+			path = Reminder;
+			sourceTree = "<group>";
+		};
 		8C1921FA274A32CE0086EC3B /* ReservedList */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,7 +243,7 @@
 		8CA6850227413DFF00405DE9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8CA6850127413DFF00405DE9 /* NIBM Parking.app */,
+				8CA6850127413DFF00405DE9 /* Smart BackPack.app */,
 				8CF20750274979E1002CA20A /* SmartBackPackUITesting.xctest */,
 			);
 			name = Products;
@@ -327,6 +353,8 @@
 		8CAFF1E5274228FB00969B52 /* View+ViewModel  */ = {
 			isa = PBXGroup;
 			children = (
+				6EA0D83F27F37A520096D348 /* Reminder */,
+				6E58C28B27F3740900B89341 /* TimeTable */,
 				6E58C28627F364A500B89341 /* Subject */,
 				8CAEA9A32742B60E005AC5EE /* App */,
 				8CAFF1E02742240600969B52 /* Shared */,
@@ -419,7 +447,7 @@
 				8C98AC342744B22600AD9D53 /* RappleProgressHUD */,
 			);
 			productName = NIBMParking;
-			productReference = 8CA6850127413DFF00405DE9 /* NIBM Parking.app */;
+			productReference = 8CA6850127413DFF00405DE9 /* Smart BackPack.app */;
 			productType = "com.apple.product-type.application";
 		};
 		8CF2074F274979E1002CA20A /* SmartBackPackUITesting */ = {
@@ -571,10 +599,13 @@
 				8C98AC372744BB0E00AD9D53 /* SlotModel.swift in Sources */,
 				8CAEA9AB2742C420005AC5EE /* AboutUs.swift in Sources */,
 				8C98AC3C2745394B00AD9D53 /* Booking.swift in Sources */,
+				6EA0D84127F37A6A0096D348 /* ReminderView.swift in Sources */,
 				8C1921FC274A32E30086EC3B /* ReservedListVM.swift in Sources */,
 				8CAEA9A72742B775005AC5EE /* CustomAlert.swift in Sources */,
+				6EA0D84427F37A800096D348 /* ReminderVM.swift in Sources */,
 				8CAEA9912742B14B005AC5EE /* BookingVM.swift in Sources */,
 				8C0814BD2744354D00E62CB3 /* SignUpVM.swift in Sources */,
+				6E58C28F27F3751200B89341 /* AddTimeTableVM.swift in Sources */,
 				8C0814BB274430E400E62CB3 /* ForgotPasswordVM.swift in Sources */,
 				8CA6850727413DFF00405DE9 /* ContentView.swift in Sources */,
 				8CAEA98C27429D96005AC5EE /* CustomLabelAndNotEditableTextField.swift in Sources */,
@@ -583,6 +614,7 @@
 				6E58C28827F364E900B89341 /* SubjectView.swift in Sources */,
 				8CAFF1E32742244500969B52 /* CustomHeader.swift in Sources */,
 				6E58C28A27F36C7600B89341 /* SubjectVM.swift in Sources */,
+				6E58C28D27F3743700B89341 /* AddTimeTableView.swift in Sources */,
 				8CAEA9932742B2EA005AC5EE /* LoginVM.swift in Sources */,
 				8CAEA9A92742BFBE005AC5EE /* LocalUser.swift in Sources */,
 				8C98AC402747E79200AD9D53 /* LocationManager.swift in Sources */,
@@ -759,7 +791,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.em.iosTest.smartBackPack;
-				PRODUCT_NAME = "NIBM Parking";
+				PRODUCT_NAME = "Smart BackPack";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -796,7 +828,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.em.iosTest.smartBackPack;
-				PRODUCT_NAME = "NIBM Parking";
+				PRODUCT_NAME = "Smart BackPack";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

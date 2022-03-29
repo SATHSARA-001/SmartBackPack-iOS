@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8CA6850027413DFF00405DE9"
-               BuildableName = "NIBM Parking.app"
+               BuildableName = "Smart BackPack.app"
                BlueprintName = "SmartBackPack"
                ReferencedContainer = "container:SmartBackPack.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8CA6850027413DFF00405DE9"
-            BuildableName = "NIBM Parking.app"
+            BuildableName = "Smart BackPack.app"
             BlueprintName = "SmartBackPack"
             ReferencedContainer = "container:SmartBackPack.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8CA6850027413DFF00405DE9"
-            BuildableName = "NIBM Parking.app"
+            BuildableName = "Smart BackPack.app"
             BlueprintName = "SmartBackPack"
             ReferencedContainer = "container:SmartBackPack.xcodeproj">
          </BuildableReference>
