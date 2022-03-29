@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+class DaysVM:ObservableObject{
+    @Published var day:String?
+
+}

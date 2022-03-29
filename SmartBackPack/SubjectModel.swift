@@ -7,33 +7,24 @@
 
 import Foundation
 
-struct Slot: Codable {
+struct Subject: Codable {
     
-    var slotId: String?
     var name: String?
-    var isVIP : String?
-
-
+    var qr : String?
     
-    
-    public init(slotId:String?,name: String?,isVIP : String?) {
+    public init(name: String?,qr : String?) {
         
-        self.slotId = slotId
         self.name = name
-        self.isVIP = isVIP
-
-
-
+        self.qr = qr
         
     }
     
     public enum CodingKeys: String, CodingKey {
-        case slotId = "slotId"
         case name = "name"
-        case isVIP = "isVIP"
-
-
-
+        case qr = "qr"
+        
+        
+        
     }
     
     

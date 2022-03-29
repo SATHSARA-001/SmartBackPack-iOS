@@ -8,11 +8,15 @@
 import SwiftUI
 
 struct AddTimeTableView: View {
+    @State  var slotNo:String?
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+
+
     var body: some View {
         ZStack {
             //colorBackground
             VStack {
-                
+                CustomHeader()
                 GeometryReader { geometry in
                     
                     ScrollView(.vertical , showsIndicators: false) {
@@ -40,6 +44,9 @@ struct AddTimeTableView: View {
                 }
             }
         }
+        .onAppear(perform: {
+            print(slotNo)
+        })
         .edgesIgnoringSafeArea(.all)
         .navigationBarHidden(true)
     }

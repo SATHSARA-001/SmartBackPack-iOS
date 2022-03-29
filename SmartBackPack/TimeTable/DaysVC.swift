@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct DaysVC: View {
+    
+    @State var isBookindViewIsActive = false
+    @StateObject var vm = DaysVM()
+    
+    
     var body: some View {
         ZStack {
             //colorBackground
@@ -21,32 +26,49 @@ struct DaysVC: View {
                             
                             
                             
-                            ProductCard(imageString: "VIP", textString: "Monday")
-                                .onTapGesture {
-                                    print("profile")
-                                }
-                            ProductCard(imageString: "VIP", textString: "Tuesday")
-                                .onTapGesture {
-                                    print("profile")
-                                }
-                            ProductCard(imageString: "VIP", textString: "Wednesday")
-                                .onTapGesture {
-                                    print("profile")
-                                }
                             
-                            ProductCard(imageString: "VIP", textString: "Thursday")
-                                .onTapGesture {
-                                    print("profile")
+                            NavigationLink(destination:
+                                            AddTimeTableView(slotNo: vm.day)
+                                           , isActive: $isBookindViewIsActive){
+                                
+                                VStack{
+                                    
+                                    ProductCard(imageString: "VIP", textString: "Monday")
+                                        .onTapGesture {
+                                            vm.day = "Monday"
+                                            isBookindViewIsActive.toggle()
+                                            print("profile")
+                                        }
+                                    ProductCard(imageString: "VIP", textString: "Tuesday")
+                                        .onTapGesture {
+                                            vm.day = "Tuesday"
+                                            isBookindViewIsActive.toggle()
+                                            print("profile")
+                                        }
+                                    ProductCard(imageString: "VIP", textString: "Wednesday")
+                                        .onTapGesture {
+                                            vm.day = "Wednesday"
+                                            isBookindViewIsActive.toggle()
+                                            print("profile")
+                                        }
+                                    
+                                    ProductCard(imageString: "VIP", textString: "Thursday")
+                                        .onTapGesture {
+                                            vm.day = "Thursday"
+                                            isBookindViewIsActive.toggle()
+                                            print("profile")
+                                        }
+                                    
+                                    ProductCard(imageString: "VIP", textString: "Friday")
+                                        .onTapGesture {
+                                            vm.day = "Friday"
+                                            isBookindViewIsActive.toggle()
+                                            print("profile")
+                                        }
                                 }
-                            
-                            ProductCard(imageString: "VIP", textString: "Friday")
-                                .onTapGesture {
-                                    print("profile")
-                                }
-                            
-                            
-                            Spacer()
-                            
+                                
+                                Spacer()
+                            }
                             
                         }
                         .padding()
