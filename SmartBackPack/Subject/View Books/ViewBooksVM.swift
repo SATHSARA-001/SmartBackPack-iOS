@@ -43,4 +43,22 @@ class ViewBooksVM:ObservableObject{
         }
         
     }
+    
+    
+    func deleteRecordBooks(subjectName:String,completion: @escaping (_ status: Bool) -> ()){
+        
+        let uid = Auth.auth().currentUser?.uid ?? ""
+        
+        let reference = self.reference.child("Subjects").child(uid).child(subjectName)
+        reference.removeValue { error, _ in
+            
+            if error != nil{
+                print(error?.localizedDescription)
+                completion(false)
+            }else{
+                completion(true)
+            }
+        }
+        
+    }
 }

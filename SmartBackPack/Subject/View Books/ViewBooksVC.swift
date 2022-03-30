@@ -9,37 +9,31 @@ import SwiftUI
 
 struct ViewBooksVC: View {
     @StateObject var vm = ViewBooksVM()
-
+    
     var body: some View {
         
-        ZStack {
-            //colorBackground
-            VStack {
-                CustomHeader()
-                GeometryReader { geometry in
-                    
-                    ScrollView(.vertical , showsIndicators: false) {
-                        
-                        VStack(alignment: .center, spacing: 60) {
-                            
-                            
-                        }
-                        .frame(minHeight: geometry.size.height)
-                        .padding(.all,20)
-                    }
-                    .frame(width: geometry.size.width)
+        NavigationView{
+            List{
+                ForEach(vm.bookList,id:\.name){subjectItem in
+                    Text(subjectItem.name ?? "")
                 }
-            }//VStack
-            
-            .onAppear(perform: {
-                vm.fetchOrders()
-            })
-            
-        }//Zstack
+                .onDelete(perform:self.deleteItem(at:) )
+                
+                
+            }
+        }
+        .onAppear(perform: vm.fetchOrders)
         
-        .edgesIgnoringSafeArea(.all)
-        .navigationBarHidden(true)
+          
+        
     }
+    
+    private func deleteItem(at indexSet: IndexSet){
+                vm.bookList.remove(atOffsets: indexSet)
+        
+            }
+    
+    
 }
 
 struct ViewBooksVC_Previews: PreviewProvider {
@@ -47,3 +41,6 @@ struct ViewBooksVC_Previews: PreviewProvider {
         ViewBooksVC()
     }
 }
+
+
+
