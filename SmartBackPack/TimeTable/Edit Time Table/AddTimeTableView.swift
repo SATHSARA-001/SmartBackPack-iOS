@@ -9,6 +9,8 @@ import SwiftUI
 
 struct AddTimeTableView: View {
     @State  var slotNo:String?
+    @StateObject var vm = AddTimeTableVM()
+
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
 
 
@@ -46,6 +48,8 @@ struct AddTimeTableView: View {
         }
         .onAppear(perform: {
             print(slotNo)
+            vm.getAvailablebooks(day: slotNo ?? "")
+            vm.getAllBooks()
         })
         .edgesIgnoringSafeArea(.all)
         .navigationBarHidden(true)
