@@ -14,9 +14,13 @@ struct ContentView: View {
     
     var body: some View {
         
-             BottomTabBar()
-        
-        
+        if Auth.auth().currentUser?.uid != nil {
+            BottomTabBar()
+        }else{
+            LoginView()
+
+        }
+    
     }
 }
 

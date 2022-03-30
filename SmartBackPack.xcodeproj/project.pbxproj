@@ -20,12 +20,14 @@
 		6EA0D84B27F37D5B0096D348 /* MoreVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA0D84A27F37D5B0096D348 /* MoreVM.swift */; };
 		6EA0D84D27F386EF0096D348 /* DaysVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA0D84C27F386EF0096D348 /* DaysVC.swift */; };
 		6EA0D85127F3877A0096D348 /* DaysVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA0D85027F3877A0096D348 /* DaysVM.swift */; };
+		6EC121AE27F3F4060095F67B /* ViewBooksVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC121AD27F3F4060095F67B /* ViewBooksVM.swift */; };
+		6EC121B027F3FC9A0095F67B /* ViewBooksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC121AF27F3FC9A0095F67B /* ViewBooksVC.swift */; };
 		8C0814BB274430E400E62CB3 /* ForgotPasswordVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0814BA274430E400E62CB3 /* ForgotPasswordVM.swift */; };
 		8C0814BD2744354D00E62CB3 /* SignUpVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0814BC2744354D00E62CB3 /* SignUpVM.swift */; };
 		8C91E5F3274D330400D34C2A /* ProductCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C91E5F2274D330400D34C2A /* ProductCard.swift */; };
 		8C91E5F5274DECA500D34C2A /* NIBM_ParkingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF20752274979E1002CA20A /* NIBM_ParkingUITests.swift */; };
 		8C98AC352744B22600AD9D53 /* RappleProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 8C98AC342744B22600AD9D53 /* RappleProgressHUD */; };
-		8C98AC372744BB0E00AD9D53 /* SubjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C98AC362744BB0E00AD9D53 /* SubjectModel.swift */; };
+		8C98AC372744BB0E00AD9D53 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C98AC362744BB0E00AD9D53 /* Subject.swift */; };
 		8C98AC3C2745394B00AD9D53 /* Booking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C98AC3B2745394B00AD9D53 /* Booking.swift */; };
 		8C98AC402747E79200AD9D53 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C98AC3F2747E79200AD9D53 /* LocationManager.swift */; };
 		8CA6850527413DFF00405DE9 /* NIBMParkingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA6850427413DFF00405DE9 /* NIBMParkingApp.swift */; };
@@ -87,11 +89,13 @@
 		6EA0D84A27F37D5B0096D348 /* MoreVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreVM.swift; sourceTree = "<group>"; };
 		6EA0D84C27F386EF0096D348 /* DaysVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysVC.swift; sourceTree = "<group>"; };
 		6EA0D85027F3877A0096D348 /* DaysVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysVM.swift; sourceTree = "<group>"; };
+		6EC121AD27F3F4060095F67B /* ViewBooksVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBooksVM.swift; sourceTree = "<group>"; };
+		6EC121AF27F3FC9A0095F67B /* ViewBooksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBooksVC.swift; sourceTree = "<group>"; };
 		78103444A4BE1214BD105519 /* Pods-SmartBackPack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartBackPack.release.xcconfig"; path = "Target Support Files/Pods-SmartBackPack/Pods-SmartBackPack.release.xcconfig"; sourceTree = "<group>"; };
 		8C0814BA274430E400E62CB3 /* ForgotPasswordVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVM.swift; sourceTree = "<group>"; };
 		8C0814BC2744354D00E62CB3 /* SignUpVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVM.swift; sourceTree = "<group>"; };
 		8C91E5F2274D330400D34C2A /* ProductCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCard.swift; sourceTree = "<group>"; };
-		8C98AC362744BB0E00AD9D53 /* SubjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectModel.swift; sourceTree = "<group>"; };
+		8C98AC362744BB0E00AD9D53 /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
 		8C98AC3B2745394B00AD9D53 /* Booking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Booking.swift; sourceTree = "<group>"; };
 		8C98AC3F2747E79200AD9D53 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		8CA6850127413DFF00405DE9 /* Smart BackPack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart BackPack.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,6 +168,7 @@
 		6E58C28627F364A500B89341 /* Subject */ = {
 			isa = PBXGroup;
 			children = (
+				6EC121AC27F3F3F60095F67B /* View Books */,
 				6E58C28727F364E900B89341 /* SubjectView.swift */,
 				6E58C28927F36C7600B89341 /* SubjectVM.swift */,
 			);
@@ -207,11 +212,20 @@
 			path = "Edit Time Table";
 			sourceTree = "<group>";
 		};
+		6EC121AC27F3F3F60095F67B /* View Books */ = {
+			isa = PBXGroup;
+			children = (
+				6EC121AD27F3F4060095F67B /* ViewBooksVM.swift */,
+				6EC121AF27F3FC9A0095F67B /* ViewBooksVC.swift */,
+			);
+			path = "View Books";
+			sourceTree = "<group>";
+		};
 		8C98AC3A2744BC0D00AD9D53 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				8CAEA9A82742BFBE005AC5EE /* LocalUser.swift */,
-				8C98AC362744BB0E00AD9D53 /* SubjectModel.swift */,
+				8C98AC362744BB0E00AD9D53 /* Subject.swift */,
 				8C98AC3B2745394B00AD9D53 /* Booking.swift */,
 			);
 			name = Model;
@@ -569,7 +583,7 @@
 				8CAFF1DB27417CAA00969B52 /* SignUpView.swift in Sources */,
 				8CAEA9AD2742CA3A005AC5EE /* ProfileVM.swift in Sources */,
 				6EA0D84D27F386EF0096D348 /* DaysVC.swift in Sources */,
-				8C98AC372744BB0E00AD9D53 /* SubjectModel.swift in Sources */,
+				8C98AC372744BB0E00AD9D53 /* Subject.swift in Sources */,
 				6EA0D84B27F37D5B0096D348 /* MoreVM.swift in Sources */,
 				6EA0D84927F37D500096D348 /* MoreView.swift in Sources */,
 				8C98AC3C2745394B00AD9D53 /* Booking.swift in Sources */,
@@ -583,12 +597,14 @@
 				8CAEA98C27429D96005AC5EE /* CustomLabelAndNotEditableTextField.swift in Sources */,
 				8CAFF1DF2742140700969B52 /* ColorConstants.swift in Sources */,
 				6E58C28827F364E900B89341 /* SubjectView.swift in Sources */,
+				6EC121AE27F3F4060095F67B /* ViewBooksVM.swift in Sources */,
 				8CAFF1E32742244500969B52 /* CustomHeader.swift in Sources */,
 				6E58C28A27F36C7600B89341 /* SubjectVM.swift in Sources */,
 				6E58C28D27F3743700B89341 /* AddTimeTableView.swift in Sources */,
 				8CAEA9932742B2EA005AC5EE /* LoginVM.swift in Sources */,
 				8CAEA9A92742BFBE005AC5EE /* LocalUser.swift in Sources */,
 				8C98AC402747E79200AD9D53 /* LocationManager.swift in Sources */,
+				6EC121B027F3FC9A0095F67B /* ViewBooksVC.swift in Sources */,
 				8CAFF1D827417C8400969B52 /* ForgotPasswordView.swift in Sources */,
 				8CAFF1E92742295500969B52 /* BottomTabBar.swift in Sources */,
 				6EA0D85127F3877A0096D348 /* DaysVM.swift in Sources */,

@@ -76,7 +76,7 @@ class SignUpVM:ObservableObject{
     
     func saveUserInDataBase(id:String?){
         
-        ref.child("users").child(id ?? "").setValue(["userID":id,"name":name ,"email":email ,"nic":nic ,"contactNo":contactNumber ,"registerNo":regNo,"vehicleNo":vehicleNo ,"password":password ,"confirmPassword":confirmPassword])
+        ref.child("UTamilsers").child(id ?? "").setValue(["userID":id,"name":name ,"email":email ,"password":password ,"confirmPassword":confirmPassword])
     }
 
     

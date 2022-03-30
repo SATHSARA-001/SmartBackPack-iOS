@@ -7,11 +7,12 @@
 
 import SwiftUI
 import Firebase
+import CodeScanner
 
 struct SubjectView: View {
     
     @StateObject var vm = SubjectVM()
-    
+    @State var isForgotPasswordScreenIsActive = false
     var ref: DatabaseReference! = Database.database().reference()
     
     var body: some View {
@@ -32,7 +33,7 @@ struct SubjectView: View {
                                 
                                 Button(action: {
                                     
-                                    
+                                    vm.isShowingScanner = true
                                     
                                 }){
                                     
@@ -46,8 +47,10 @@ struct SubjectView: View {
                                     .font(.footnote)
                             }
                             
-                            CustomLabelAndNotEditableTextField(labelTxt:"Name", valueText: $vm.name)
                             CustomLabelAndNotEditableTextField(labelTxt:"QR", valueText: $vm.qrCode)
+                                .disabled(true)
+                            CustomLabelAndNotEditableTextField(labelTxt:"Name", valueText: $vm.name)
+                         
                             
                             Button(action: {
                                 
@@ -55,13 +58,34 @@ struct SubjectView: View {
                                 
                             }){
                                 
-                                Text("Save")
+                                Text("Add Book")
                                     .foregroundColor(Color.white)
                                     .padding()
                                     .frame(width: 220, height: 48)
                                     .background(colorBackground)
                                     .cornerRadius(24)
                             }
+                            
+                            NavigationLink(destination:
+                                            ViewBooksVC()
+                                           , isActive: $isForgotPasswordScreenIsActive){
+                                
+                            Button(action: {
+                                
+                                isForgotPasswordScreenIsActive.toggle()
+                               // vm.saveUserInDataBase()
+                                
+                            }){
+                                
+                                Text("View Added Books")
+                                    .foregroundColor(Color.white)
+                                    .padding()
+                                    .frame(width: 220, height: 48)
+                                    .background(colorBackground)
+                                    .cornerRadius(24)
+                            }
+                            
+                        }
                             
                             Spacer()
                             
@@ -74,10 +98,16 @@ struct SubjectView: View {
                     .frame(width: geometry.size.width)
                 }
             }//VStack
+            
+            CustomAlert(isShowAlert: $vm.isShowAlert, alertTitle: vm.alertTitle, alertMessage:vm.alertMessage)
         }
         .edgesIgnoringSafeArea(.all)
         .navigationBarHidden(true)
         
+        .sheet(isPresented: $vm.isShowingScanner) {
+            CodeScannerView(codeTypes: [.qr], simulatedData: "Paul hudson\npaul@hackingwithswift.com", completion: vm.handleScan)
+            
+        }
     }
 }
 

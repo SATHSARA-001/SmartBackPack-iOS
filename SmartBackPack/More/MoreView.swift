@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MoreView: View {
+    @StateObject var vm = MoreVM()
+
     var body: some View {
         ZStack {
             //colorBackground
@@ -41,7 +43,9 @@ struct MoreView: View {
                             
                             ProductCard(imageString: "VIP", textString: "Log out")
                                 .onTapGesture {
-                                    print("profile")
+                                    vm.logOutCurrentUser { status in
+                                        print("")
+                                    }
                                 }
                           
                             
