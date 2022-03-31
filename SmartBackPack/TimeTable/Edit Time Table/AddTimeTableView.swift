@@ -32,9 +32,18 @@ struct AddTimeTableView: View {
                                 .font(.largeTitle)
                             
                             
+                            ForEach (vm.availableBookList,id:\.name){ bookItem in
+                                
+                            }
+                            
+                            
                             Text("Books not in the list")
                                 .foregroundColor(Color.gray)
                                 .font(.largeTitle)
+                            
+                            ForEach (vm.listOfAllBooks,id:\.name){ bookItem in
+                                
+                            }
                             
                             Spacer()
                             

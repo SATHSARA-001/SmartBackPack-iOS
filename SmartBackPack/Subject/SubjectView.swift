@@ -37,12 +37,12 @@ struct SubjectView: View {
                                     
                                 }){
                                     
-                                    Image("VIP")
+                                    Image("Qr_Code")
                                         .resizable()
-                                        .frame(width: 200, height: 200)
+                                        .frame(width: 200, height: 150)
                                 }
                         
-                                Text("QR Code Scanned Success")
+                                Text("Tap to scan the QR code")
                                     .foregroundColor(Color.gray)
                                     .font(.footnote)
                             }

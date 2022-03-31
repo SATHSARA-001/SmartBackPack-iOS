@@ -21,7 +21,7 @@ struct MoreView: View {
                         
                         VStack(alignment: .center, spacing: 20) {
                              
-                          
+                            Spacer()
                             
                             ProductCard(imageString: "VIP", textString: "Profile")
                                 .onTapGesture {
@@ -53,7 +53,7 @@ struct MoreView: View {
                             
                             
                         }
-                        .padding()
+                        .padding(.all,20)
                         .frame(minHeight: geometry.size.height)
                     }
                     .frame(width: geometry.size.width)

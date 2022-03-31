@@ -22,6 +22,7 @@
 		6EA0D85127F3877A0096D348 /* DaysVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA0D85027F3877A0096D348 /* DaysVM.swift */; };
 		6EC121AE27F3F4060095F67B /* ViewBooksVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC121AD27F3F4060095F67B /* ViewBooksVM.swift */; };
 		6EC121B027F3FC9A0095F67B /* ViewBooksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC121AF27F3FC9A0095F67B /* ViewBooksVC.swift */; };
+		6EC121B227F434D10095F67B /* CustomListCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC121B127F434D10095F67B /* CustomListCard.swift */; };
 		8C0814BB274430E400E62CB3 /* ForgotPasswordVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0814BA274430E400E62CB3 /* ForgotPasswordVM.swift */; };
 		8C0814BD2744354D00E62CB3 /* SignUpVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0814BC2744354D00E62CB3 /* SignUpVM.swift */; };
 		8C91E5F3274D330400D34C2A /* ProductCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C91E5F2274D330400D34C2A /* ProductCard.swift */; };
@@ -91,6 +92,7 @@
 		6EA0D85027F3877A0096D348 /* DaysVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysVM.swift; sourceTree = "<group>"; };
 		6EC121AD27F3F4060095F67B /* ViewBooksVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBooksVM.swift; sourceTree = "<group>"; };
 		6EC121AF27F3FC9A0095F67B /* ViewBooksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBooksVC.swift; sourceTree = "<group>"; };
+		6EC121B127F434D10095F67B /* CustomListCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomListCard.swift; sourceTree = "<group>"; };
 		78103444A4BE1214BD105519 /* Pods-SmartBackPack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartBackPack.release.xcconfig"; path = "Target Support Files/Pods-SmartBackPack/Pods-SmartBackPack.release.xcconfig"; sourceTree = "<group>"; };
 		8C0814BA274430E400E62CB3 /* ForgotPasswordVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVM.swift; sourceTree = "<group>"; };
 		8C0814BC2744354D00E62CB3 /* SignUpVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVM.swift; sourceTree = "<group>"; };
@@ -348,6 +350,7 @@
 				8CAEA98B27429D96005AC5EE /* CustomLabelAndNotEditableTextField.swift */,
 				8CAEA9A62742B775005AC5EE /* CustomAlert.swift */,
 				8C91E5F2274D330400D34C2A /* ProductCard.swift */,
+				6EC121B127F434D10095F67B /* CustomListCard.swift */,
 			);
 			name = Shared;
 			path = Auth;
@@ -598,6 +601,7 @@
 				8CAFF1DF2742140700969B52 /* ColorConstants.swift in Sources */,
 				6E58C28827F364E900B89341 /* SubjectView.swift in Sources */,
 				6EC121AE27F3F4060095F67B /* ViewBooksVM.swift in Sources */,
+				6EC121B227F434D10095F67B /* CustomListCard.swift in Sources */,
 				8CAFF1E32742244500969B52 /* CustomHeader.swift in Sources */,
 				6E58C28A27F36C7600B89341 /* SubjectVM.swift in Sources */,
 				6E58C28D27F3743700B89341 /* AddTimeTableView.swift in Sources */,
