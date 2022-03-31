@@ -33,6 +33,8 @@ struct DaysVC: View {
                                 
                                 VStack{
                                     
+                                    Spacer()
+                                    
                                     ProductCard(imageString: "VIP", textString: "Monday")
                                         .onTapGesture {
                                             vm.day = "Monday"
@@ -65,9 +67,11 @@ struct DaysVC: View {
                                             isBookindViewIsActive.toggle()
                                             print("profile")
                                         }
+                                    
+                                    Spacer()
+
                                 }
                                 
-                                Spacer()
                             }
                             
                         }

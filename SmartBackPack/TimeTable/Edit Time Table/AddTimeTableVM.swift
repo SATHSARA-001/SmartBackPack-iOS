@@ -12,6 +12,7 @@ class AddTimeTableVM:ObservableObject{
     
     @Published var availableBookList = [Subject]()
     @Published var listOfAllBooks = [Subject]()
+    @Published var reference = Database.database().reference()
 
     
     func getAvailablebooks(day:String){
@@ -76,4 +77,59 @@ class AddTimeTableVM:ObservableObject{
         
     }
     
+    
+    func removeBookFromTimeTable(subjectName:String,day:String,completion: @escaping (_ status: Bool) -> ()){
+        
+        let userId = Auth.auth().currentUser?.uid ?? ""
+        
+        let reference = self.reference.child("TimeTable").child(userId).child(day).child(subjectName)
+        reference.removeValue { error, _ in
+            
+            if error != nil{
+                print(error?.localizedDescription)
+                completion(false)
+            }else{
+                self.getAllBooks()
+                completion(true)
+            }
+        }
+        
+    }
+    
+    func addBookToTimeTable(subject:Subject,day:String,completion: @escaping (_ status: Bool) -> ()){
+        
+        let userId = Auth.auth().currentUser?.uid ?? ""
+        
+        let reference = self.reference.child("TimeTable").child(userId).child(day).child(subject.name ?? "")
+        
+        do{
+            let obj = try subject.toDictionary()
+            reference.setValue(obj)
+            getAllBooks()
+        }catch{
+            
+        }
+        
+        
+        
+    }
+    
+}
+
+
+//Subject - usedid - bookname
+
+
+extension Encodable {
+
+    /// Converting object to postable dictionary
+    func toDictionary(_ encoder: JSONEncoder = JSONEncoder()) throws -> [String: Any] {
+        let data = try encoder.encode(self)
+        let object = try JSONSerialization.jsonObject(with: data)
+        guard let json = object as? [String: Any] else {
+            let context = DecodingError.Context(codingPath: [], debugDescription: "Deserialized object is not a dictionary")
+            throw DecodingError.typeMismatch(type(of: object), context)
+        }
+        return json
+    }
 }
