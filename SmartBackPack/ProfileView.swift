@@ -20,7 +20,7 @@ struct ProfileView: View {
         ZStack {
             //colorBackground
             VStack {
-                
+                CustomHeader()
                 GeometryReader { geometry in
                     
                     ScrollView(.vertical , showsIndicators: false) {
