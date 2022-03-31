@@ -46,7 +46,7 @@ class ProfileVM : ObservableObject{
         if let user = Auth.auth().currentUser{
             
             let uid = user.uid
-            let dbRef = Database.database().reference().child("users").child(uid)
+            let dbRef = Database.database().reference().child("Users").child(uid)
             
             dbRef.observeSingleEvent(of: .value) { snapshot in
                 

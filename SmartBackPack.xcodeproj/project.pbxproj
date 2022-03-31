@@ -23,6 +23,10 @@
 		6EC121AE27F3F4060095F67B /* ViewBooksVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC121AD27F3F4060095F67B /* ViewBooksVM.swift */; };
 		6EC121B027F3FC9A0095F67B /* ViewBooksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC121AF27F3FC9A0095F67B /* ViewBooksVC.swift */; };
 		6EC121B227F434D10095F67B /* CustomListCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC121B127F434D10095F67B /* CustomListCard.swift */; };
+		6EC121C227F5E3480095F67B /* HistoryListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC121C127F5E3480095F67B /* HistoryListVC.swift */; };
+		6EC121C427F5E3570095F67B /* HistoryListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC121C327F5E3570095F67B /* HistoryListVM.swift */; };
+		6EC121C627F5E36A0095F67B /* ViewHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC121C527F5E36A0095F67B /* ViewHistoryVC.swift */; };
+		6EC121C827F5E3800095F67B /* ViewHistoryVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC121C727F5E3800095F67B /* ViewHistoryVM.swift */; };
 		8C0814BB274430E400E62CB3 /* ForgotPasswordVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0814BA274430E400E62CB3 /* ForgotPasswordVM.swift */; };
 		8C0814BD2744354D00E62CB3 /* SignUpVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0814BC2744354D00E62CB3 /* SignUpVM.swift */; };
 		8C91E5F3274D330400D34C2A /* ProductCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C91E5F2274D330400D34C2A /* ProductCard.swift */; };
@@ -93,6 +97,10 @@
 		6EC121AD27F3F4060095F67B /* ViewBooksVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBooksVM.swift; sourceTree = "<group>"; };
 		6EC121AF27F3FC9A0095F67B /* ViewBooksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBooksVC.swift; sourceTree = "<group>"; };
 		6EC121B127F434D10095F67B /* CustomListCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomListCard.swift; sourceTree = "<group>"; };
+		6EC121C127F5E3480095F67B /* HistoryListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryListVC.swift; sourceTree = "<group>"; };
+		6EC121C327F5E3570095F67B /* HistoryListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryListVM.swift; sourceTree = "<group>"; };
+		6EC121C527F5E36A0095F67B /* ViewHistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHistoryVC.swift; sourceTree = "<group>"; };
+		6EC121C727F5E3800095F67B /* ViewHistoryVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHistoryVM.swift; sourceTree = "<group>"; };
 		78103444A4BE1214BD105519 /* Pods-SmartBackPack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartBackPack.release.xcconfig"; path = "Target Support Files/Pods-SmartBackPack/Pods-SmartBackPack.release.xcconfig"; sourceTree = "<group>"; };
 		8C0814BA274430E400E62CB3 /* ForgotPasswordVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVM.swift; sourceTree = "<group>"; };
 		8C0814BC2744354D00E62CB3 /* SignUpVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVM.swift; sourceTree = "<group>"; };
@@ -199,6 +207,9 @@
 		6EA0D84727F37D420096D348 /* More */ = {
 			isa = PBXGroup;
 			children = (
+				6EA0D83F27F37A520096D348 /* Reminder */,
+				8CF2074B27496E13002CA20A /* Terms */,
+				8CAFF1ED27422A9D00969B52 /* Profile */,
 				6EA0D84827F37D500096D348 /* MoreView.swift */,
 				6EA0D84A27F37D5B0096D348 /* MoreVM.swift */,
 			);
@@ -221,6 +232,25 @@
 				6EC121AF27F3FC9A0095F67B /* ViewBooksVC.swift */,
 			);
 			path = "View Books";
+			sourceTree = "<group>";
+		};
+		6EC121BD27F5E28F0095F67B /* History */ = {
+			isa = PBXGroup;
+			children = (
+				6EC121C027F5E32B0095F67B /* View History */,
+				6EC121C127F5E3480095F67B /* HistoryListVC.swift */,
+				6EC121C327F5E3570095F67B /* HistoryListVM.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		6EC121C027F5E32B0095F67B /* View History */ = {
+			isa = PBXGroup;
+			children = (
+				6EC121C527F5E36A0095F67B /* ViewHistoryVC.swift */,
+				6EC121C727F5E3800095F67B /* ViewHistoryVM.swift */,
+			);
+			path = "View History";
 			sourceTree = "<group>";
 		};
 		8C98AC3A2744BC0D00AD9D53 /* Model */ = {
@@ -359,14 +389,12 @@
 		8CAFF1E5274228FB00969B52 /* View+ViewModel  */ = {
 			isa = PBXGroup;
 			children = (
+				6EC121BD27F5E28F0095F67B /* History */,
 				6EA0D84727F37D420096D348 /* More */,
-				6EA0D83F27F37A520096D348 /* Reminder */,
 				6E58C28B27F3740900B89341 /* TimeTable */,
 				6E58C28627F364A500B89341 /* Subject */,
 				8CA6851427414C3800405DE9 /* Auth */,
-				8CAFF1ED27422A9D00969B52 /* Profile */,
 				8C98AC3E27456EC600AD9D53 /* MainTBC */,
-				8CF2074B27496E13002CA20A /* Terms */,
 			);
 			name = "View+ViewModel ";
 			sourceTree = "<group>";
@@ -378,6 +406,7 @@
 				8CAEA9AC2742CA3A005AC5EE /* ProfileVM.swift */,
 			);
 			name = Profile;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		8CF2074B27496E13002CA20A /* Terms */ = {
@@ -580,6 +609,7 @@
 				8CAFF1F32742353A00969B52 /* CustomSecureTextField.swift in Sources */,
 				8CAFF1F12742331F00969B52 /* CustomTextField.swift in Sources */,
 				8CF2074827496B39002CA20A /* WebViewModel.swift in Sources */,
+				6EC121C227F5E3480095F67B /* HistoryListVC.swift in Sources */,
 				8CF2074A27496E0D002CA20A /* Terms.swift in Sources */,
 				8CA6851327414BA400405DE9 /* LoginView.swift in Sources */,
 				8CAFF1EF27422AAC00969B52 /* ProfileView.swift in Sources */,
@@ -596,8 +626,11 @@
 				8C0814BD2744354D00E62CB3 /* SignUpVM.swift in Sources */,
 				6E58C28F27F3751200B89341 /* AddTimeTableVM.swift in Sources */,
 				8C0814BB274430E400E62CB3 /* ForgotPasswordVM.swift in Sources */,
+				6EC121C827F5E3800095F67B /* ViewHistoryVM.swift in Sources */,
+				6EC121C627F5E36A0095F67B /* ViewHistoryVC.swift in Sources */,
 				8CA6850727413DFF00405DE9 /* ContentView.swift in Sources */,
 				8CAEA98C27429D96005AC5EE /* CustomLabelAndNotEditableTextField.swift in Sources */,
+				6EC121C427F5E3570095F67B /* HistoryListVM.swift in Sources */,
 				8CAFF1DF2742140700969B52 /* ColorConstants.swift in Sources */,
 				6E58C28827F364E900B89341 /* SubjectView.swift in Sources */,
 				6EC121AE27F3F4060095F67B /* ViewBooksVM.swift in Sources */,

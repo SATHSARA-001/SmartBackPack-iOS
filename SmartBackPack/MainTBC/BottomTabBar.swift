@@ -54,6 +54,13 @@ struct BottomTabBar: View {
         NavigationView {
             
             TabView {
+                
+                HistoryListVC()
+                    .tabItem {
+                        
+                        Image("home")
+                        Text("History")
+                    }
               
                 SubjectView()
                     .tabItem {

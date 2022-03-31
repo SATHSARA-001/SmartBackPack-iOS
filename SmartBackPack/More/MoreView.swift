@@ -27,14 +27,14 @@ struct MoreView: View {
                                 .onTapGesture {
                                     print("profile")
                                 }
-                            ProductCard(imageString: "VIP", textString: "Modify Password")
-                                .onTapGesture {
-                                    print("profile")
-                                }
-                            ProductCard(imageString: "VIP", textString: "About Us")
-                                .onTapGesture {
-                                    print("profile")
-                                }
+//                            ProductCard(imageString: "VIP", textString: "Modify Password")
+//                                .onTapGesture {
+//                                    print("profile")
+//                                }
+//                            ProductCard(imageString: "VIP", textString: "About Us")
+//                                .onTapGesture {
+//                                    print("profile")
+//                                }
                             
                             ProductCard(imageString: "VIP", textString: "Edit Reminder")
                                 .onTapGesture {
