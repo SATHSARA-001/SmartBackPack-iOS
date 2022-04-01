@@ -37,7 +37,7 @@ struct LoginView: View {
                             
                             Spacer()
                             
-                            Image("Logo")
+                            Image("VIP")
                                 .resizable()
                                 .frame(width: 200, height: 100)
                             
