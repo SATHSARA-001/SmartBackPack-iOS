@@ -29,7 +29,7 @@ class HistoryListVM:ObservableObject{
         
         
         for dayString in dates {
-            let dbRef = Database.database().reference().child("History").child("6OUpG4WZXiVSloYCCKAklNsuaJg1").child(dayString )
+            let dbRef = Database.database().reference().child("History").child(uid).child(dayString )
             
             
             dbRef.observe(DataEventType.value) { (snapshot) in
