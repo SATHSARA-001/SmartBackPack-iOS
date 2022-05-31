@@ -25,40 +25,42 @@ struct SignUp: View {
                         
                         VStack(alignment: .center, spacing: 20) {
                             
-                            Image("VIP")
+                            Image("AppLogo")
                                 .resizable()
-                                .frame(width: 200, height: 100)
+                            
+                                .frame(width: 150, height: 150)
+                                .cornerRadius(10)
                             
                             CustomTextField(placeHolder: "Enter name . . .", valueText: $vm.name)
                             CustomTextField(placeHolder: "Enter email address . . .", valueText: $vm.email)
                             CustomSecureTextField(placeHolder: "Enter password . . .",password: $vm.password)
                             CustomSecureTextField(placeHolder: "Enter confirm password . . .",password: $vm.confirmPassword)
                             
-        
+                            
+                            
+                            Button(action: {
                                 
-                                Button(action: {
-                                    
-                                    if vm.proceedWithLoginView(){
-                                        vm.registerUserNetworkRequest { success in
-                                            if success{
-                                                isSignUpSuccess = true
-                                                Authenticated.send(true)
-                                                self.isBottomTabBarIsActive.toggle()
-                                                
-                                            }
+                                if vm.proceedWithLoginView(){
+                                    vm.registerUserNetworkRequest { success in
+                                        if success{
+                                            isSignUpSuccess = true
+                                            Authenticated.send(true)
+                                            self.isBottomTabBarIsActive.toggle()
+                                            
                                         }
                                     }
-                                    
-                                }){
-                                    Text("Sign Up")
-                                        .foregroundColor(Color.white)
-                                        .padding()
-                                        .frame(width: 220, height: 48)
-                                        .background(colorBackground)
-                                        .cornerRadius(24)
                                 }
                                 
-                           // }
+                            }){
+                                Text("Sign Up")
+                                    .foregroundColor(Color.white)
+                                    .padding()
+                                    .frame(width: 220, height: 48)
+                                    .background(colorBackground)
+                                    .cornerRadius(24)
+                            }
+                            
+                            // }
                             
                         }
                         .frame(minHeight: geometry.size.height)
@@ -74,16 +76,16 @@ struct SignUp: View {
             }
             
             NavigationLink(destination:
-                                     BottomTabBar()
-                                    , isActive: $isSignUpViewIsActive){}
+                            BottomTabBar()
+                           , isActive: $isSignUpViewIsActive){}
             
             
         }//ZStack
         .navigationBarHidden(true)
         .navigationTitle("")
         .edgesIgnoringSafeArea(.all)
-
-
+        
+        
     }
 }
 

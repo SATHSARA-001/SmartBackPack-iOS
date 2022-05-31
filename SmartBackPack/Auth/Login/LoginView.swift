@@ -37,9 +37,10 @@ struct LoginView: View {
                             
                             Spacer()
                             
-                            Image("VIP")
+                            Image("AppLogo")
                                 .resizable()
-                                .frame(width: 200, height: 100)
+                                .frame(width: 150, height: 150)
+                                .cornerRadius(10)
                             
                             
                             CustomTextField(placeHolder: "Enter email address . . .", valueText:$vm.email)

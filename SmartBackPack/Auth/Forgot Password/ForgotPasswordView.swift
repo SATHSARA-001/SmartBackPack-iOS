@@ -12,7 +12,7 @@ struct ForgotPasswordView: View {
     
     @StateObject var vm = ForgotPasswordVM()
     var ref: DatabaseReference! = Database.database().reference()
-
+    
     
     var body: some View {
         
@@ -28,9 +28,10 @@ struct ForgotPasswordView: View {
                             
                             Spacer()
                             
-                            Image("Logo")
+                            Image("AppLogo")
                                 .resizable()
-                                .frame(width: 200, height: 100)
+                                .frame(width: 150, height: 150)
+                                .cornerRadius(10)
                             
                             CustomTextField(placeHolder: "Enter email address . . .", valueText: $vm.email)
                             
@@ -42,10 +43,10 @@ struct ForgotPasswordView: View {
                                     }
                                 }
                                 
-//                                for i in 5...20 {
-//                                    ref.child("slots").child("\(i)").setValue(["slotId":"\(i)","name": "Slot No.\(i)","isVIP":"false"])
-//                                }
-
+                                //                                for i in 5...20 {
+                                //                                    ref.child("slots").child("\(i)").setValue(["slotId":"\(i)","name": "Slot No.\(i)","isVIP":"false"])
+                                //                                }
+                                
                                 
                             }){
                                 Text("Submit")
@@ -71,7 +72,7 @@ struct ForgotPasswordView: View {
         }//ZStack
         .edgesIgnoringSafeArea(.all)
         .navigationBarHidden(true)
-
+        
         
     }
 }
