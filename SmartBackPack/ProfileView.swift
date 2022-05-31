@@ -30,9 +30,9 @@ struct ProfileView: View {
                             Spacer()
                             
                             
-                            Image("Logo")
+                            Image("user")
                                 .resizable()
-                                .frame(width: 200, height: 100)
+                                .frame(width: 100, height: 100)
                             
                             CustomLabelAndNotEditableTextField(labelTxt:"Name", valueText: $vm.name)
                             CustomLabelAndNotEditableTextField(labelTxt:"Email", valueText: $vm.email)

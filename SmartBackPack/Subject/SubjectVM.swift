@@ -51,6 +51,8 @@ class SubjectVM:ObservableObject{
         self.isShowAlert = true
         self.alertTitle = "Success !!!"
         self.alertMessage = "Successfully Added !!!"
+        name = ""
+        qrCode = ""
     }
     
     func handleScan(result: Result<String, CodeScannerView.ScanError>) {
