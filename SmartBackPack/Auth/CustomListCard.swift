@@ -15,22 +15,28 @@ struct CustomListCard: View {
     
     var body: some View {
         
-        HStack(alignment: .center,spacing: 10) {
+        HStack() {
             
             
             Text(textString ?? "")
                 .font(.system(size: 14, weight: .bold, design: .default))
                 .foregroundColor(.black)
+                .padding(.all,16)
+            
+            Spacer()
             
             Image(imageString ?? "")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 34)
-                .padding(.all, 34)
+                .padding(.all, 16)
 
             
         }
+        .background(Color.green.opacity(0.5))
+        .cornerRadius(6)
         .padding(.all,10)
+        
         
 
     }

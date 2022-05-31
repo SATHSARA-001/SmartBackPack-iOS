@@ -12,45 +12,139 @@ import Firebase
 
 class HistoryListVM:ObservableObject{
     
-    var mondayHistory:[History] = []
+    @Published var mondayHistory:[History] = []
+    @Published var tuesdayHistory:[History] = []
+    @Published var wednesdayHistory:[History] = []
+    @Published var thursdayHistory:[History] = []
+    @Published var fridayHistory:[History] = []
+    
     var hasTimeElapsed = false
     var dates = ["Monday","Tuesday","Wednesday","Thursday","Friday"]
     
-    func delay(){
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 8){
-            self.hasTimeElapsed = true
-        }
-        
-    }
     
-  
-    func fetchHistory(){
+    
+    func fetchHistory(completion: @escaping (_ status: Bool) -> ()){
         
         let uid = Auth.auth().currentUser?.uid ?? ""
-
-        let dbRef = Database.database().reference().child("History").child("6OUpG4WZXiVSloYCCKAklNsuaJg1").child("Monday")
         
-        dbRef.observe(DataEventType.value) { (snapshot) in
-            print(snapshot)
-            if snapshot.childrenCount > 0{
+        
+        for dayString in dates {
+            let dbRef = Database.database().reference().child("History").child("6OUpG4WZXiVSloYCCKAklNsuaJg1").child(dayString )
+            
+            
+            dbRef.observe(DataEventType.value) { (snapshot) in
+                print(snapshot)
                 
-                self.mondayHistory.removeAll()
-                
-                for days in snapshot.children.allObjects as! [DataSnapshot]{
+                if snapshot.childrenCount > 0{
                     
-                    let bookObjectData = days.value as? [String: AnyObject]
-                    
-                    let day  = bookObjectData?["day"]
-                    let name = bookObjectData?["name"]
-                    
-                    let bookObject = History(name: name as? String, day: day as? String)
-                    
-                    self.mondayHistory.append(bookObject)
-
-                    print(self.mondayHistory.count)
+                    if dayString == "Monday"{
+                        
+                        self.mondayHistory.removeAll()
+                        
+                        for days in snapshot.children.allObjects as! [DataSnapshot]{
+                            
+                            let bookObjectData = days.value as? [String: AnyObject]
+                            
+                            let day  = bookObjectData?["day"]
+                            let name = bookObjectData?["name"]
+                            
+                            let bookObject = History(name: name as? String, day: day as? String)
+                            
+                            self.mondayHistory.append(bookObject)
+                            
+                            print(self.mondayHistory.count)
+                            
+                            completion(true)
+                            
+                        }
+                        
+                    }else if dayString == "Tuesday"{
+                        
+                        self.tuesdayHistory.removeAll()
+                        
+                        for days in snapshot.children.allObjects as! [DataSnapshot]{
+                            
+                            let bookObjectData = days.value as? [String: AnyObject]
+                            
+                            let day  = bookObjectData?["day"]
+                            let name = bookObjectData?["name"]
+                            
+                            let bookObject = History(name: name as? String, day: day as? String)
+                            
+                            self.tuesdayHistory.append(bookObject)
+                            
+                            print(self.tuesdayHistory.count)
+                            
+                            completion(true)
+                            
+                        }
+                        
+                        
+                    }else if dayString == "Wednesday"{
+                        
+                        self.wednesdayHistory.removeAll()
+                        for days in snapshot.children.allObjects as! [DataSnapshot]{
+                            
+                            let bookObjectData = days.value as? [String: AnyObject]
+                            
+                            let day  = bookObjectData?["day"]
+                            let name = bookObjectData?["name"]
+                            
+                            let bookObject = History(name: name as? String, day: day as? String)
+                            
+                            self.wednesdayHistory.append(bookObject)
+                            
+                            print(self.wednesdayHistory.count)
+                            
+                            completion(true)
+                            
+                        }
+                        
+                        
+                    }else if dayString == "Thursday"{
+                        
+                        self.thursdayHistory.removeAll()
+                        for days in snapshot.children.allObjects as! [DataSnapshot]{
+                            
+                            let bookObjectData = days.value as? [String: AnyObject]
+                            
+                            let day  = bookObjectData?["day"]
+                            let name = bookObjectData?["name"]
+                            
+                            let bookObject = History(name: name as? String, day: day as? String)
+                            
+                            self.thursdayHistory.append(bookObject)
+                            
+                            print(self.thursdayHistory.count)
+                            
+                            completion(true)
+                            
+                        }
+                        
+                        
+                    }else if dayString == "Friday"{
+                        
+                        self.fridayHistory.removeAll()
+                        for days in snapshot.children.allObjects as! [DataSnapshot]{
+                            
+                            let bookObjectData = days.value as? [String: AnyObject]
+                            
+                            let day  = bookObjectData?["day"]
+                            let name = bookObjectData?["name"]
+                            
+                            let bookObject = History(name: name as? String, day: day as? String)
+                            
+                            self.fridayHistory.append(bookObject)
+                            
+                            print(self.fridayHistory.count)
+                            
+                            completion(true)
+                            
+                        }
+                        
+                    }
+            
                 }
-                                
             }
         }
         

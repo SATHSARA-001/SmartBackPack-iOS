@@ -17,26 +17,95 @@ struct HistoryListVC: View {
     
     var body: some View {
         
-        NavigationView{
-            List{
+        ZStack {
+            //colorBackground
+            VStack {
                 
-                ForEach(vm.mondayHistory,id:\.name){subjectItem in
-                    Text(subjectItem.name ?? "")
+                GeometryReader { geometry in
+                    
+                    ScrollView(.vertical , showsIndicators: false) {
+                        
+                        VStack(alignment: .center, spacing: 20) {
+                            
+                            Spacer()
+                            
+                            List {
+                                Section(header: Text("Monday")) {
+                                    ForEach(vm.mondayHistory,id:\.name){subjectItem in
+                                        
+                                        CustomBookList(textString: subjectItem.name)
+                                    }
+                                    
+                                }
+                                
+                            }
+                            
+//                            List {
+//                                Section(header: Text("Tuesday")) {
+//                                    ForEach(vm.tuesdayHistory,id:\.name){subjectItem in
+//                                        
+//                                        CustomBookList(textString: subjectItem.name)
+//                                    }
+//                                    
+//                                }
+//                                
+//                            }
+//                            
+//                            List {
+//                                Section(header: Text("Wednesday")) {
+//                                    ForEach(vm.wednesdayHistory,id:\.name){subjectItem in
+//                                        
+//                                        CustomBookList(textString: subjectItem.name)
+//                                    }
+//                                    
+//                                }
+//                                
+//                            }
+//                            List {
+//                                Section(header: Text("Thursday")) {
+//                                    ForEach(vm.thursdayHistory,id:\.name){subjectItem in
+//                                        
+//                                        CustomBookList(textString: subjectItem.name)
+//                                    }
+//                                    
+//                                }
+//                                
+//                            }
+//                            List {
+//                                Section(header: Text("Friday")) {
+//                                    ForEach(vm.fridayHistory,id:\.name){subjectItem in
+//                                        
+//                                        CustomBookList(textString: subjectItem.name)
+//                                    }
+//                                    
+//                                }
+//                                
+//                            }
+                            
+                            Spacer()
+                            
+                        }
+                        .padding(.top,40)
+                        .frame(minHeight: geometry.size.height)
+                    }
+                    .frame(width: geometry.size.width)
                 }
-                
-                
             }
         }
         .onAppear(perform: {
-        
-            vm.fetchHistory()
+            
+            
+            vm.fetchHistory() { status in
+                print(status)
+            }
         })
-        
+        .edgesIgnoringSafeArea(.all)
+        .navigationBarHidden(true)
           
         
     }
     
-
+    
     
     
 }
@@ -46,6 +115,5 @@ struct HistoryListVC_Previews: PreviewProvider {
         HistoryListVC()
     }
 }
-
 
 
