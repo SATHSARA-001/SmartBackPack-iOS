@@ -30,7 +30,7 @@ struct MoreView: View {
                                             ProfileView()
                                            , isActive: $isBookindViewIsActive){
                                 
-                                ProductCard(imageString: "VIP", textString: "Profile")
+                                ProductCard(imageString: "user", textString: "Profile")
                                     .onTapGesture {
                                         print("profile")
                                         isBookindViewIsActive.toggle()
@@ -50,7 +50,7 @@ struct MoreView: View {
                                             ReminderView()
                                            , isActive: $isReminderViewIsActive){
                                 
-                                ProductCard(imageString: "VIP", textString: "Edit Reminder")
+                                ProductCard(imageString: "reminder", textString: "Edit Reminder")
                                     .onTapGesture {
                                         isReminderViewIsActive.toggle()
                                         print("profile")
@@ -59,7 +59,7 @@ struct MoreView: View {
                             
       
                                 
-                                ProductCard(imageString: "VIP", textString: "Log out")
+                                ProductCard(imageString: "signout", textString: "Log out")
                                     .onTapGesture {
                                         vm.logOutCurrentUser { status in
                                             print("")

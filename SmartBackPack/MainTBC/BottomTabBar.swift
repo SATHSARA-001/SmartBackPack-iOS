@@ -51,17 +51,11 @@ struct BottomTabBar: View {
     
     var body: some View {
         
+        
         NavigationView {
             
             TabView {
                 
-                HistoryListVC()
-                    .tabItem {
-                        
-                        Image("home")
-                        Text("History")
-                    }
-              
                 SubjectView()
                     .tabItem {
                         
@@ -69,17 +63,26 @@ struct BottomTabBar: View {
                         Text("Book")
                     }
                 
+                HistoryListVC()
+                    .tabItem {
+                        
+                        Image("icons8-order-history-50")
+                        Text("History")
+                    }
+              
+               
+                
                 DaysVC()
                     .tabItem {
                         
-                        Image("home")
+                        Image("icons8-data-sheet-50")
                         Text("Time Table")
                     }
                 
                 MoreView()
                     .tabItem {
                         
-                        Image("home")
+                        Image("icons8-more-50")
                         Text("more")
                     }
 
@@ -88,6 +91,7 @@ struct BottomTabBar: View {
             .onReceive(Authenticated, perform: {
                 isAuthenticated = $0
             })
+            
             
             .navigationBarHidden(true)
             .navigationTitle("")

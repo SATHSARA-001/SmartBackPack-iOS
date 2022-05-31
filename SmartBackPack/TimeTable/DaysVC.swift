@@ -35,33 +35,33 @@ struct DaysVC: View {
                                     
                                     Spacer()
                                     
-                                    ProductCard(imageString: "VIP", textString: "Monday")
+                                    ProductCard(imageString: "monday", textString: "Monday")
                                         .onTapGesture {
                                             vm.day = "Monday"
                                             isBookindViewIsActive.toggle()
                                             print("profile")
                                         }
-                                    ProductCard(imageString: "VIP", textString: "Tuesday")
+                                    ProductCard(imageString: "tuesday", textString: "Tuesday")
                                         .onTapGesture {
                                             vm.day = "Tuesday"
                                             isBookindViewIsActive.toggle()
                                             print("profile")
                                         }
-                                    ProductCard(imageString: "VIP", textString: "Wednesday")
+                                    ProductCard(imageString: "wednesday", textString: "Wednesday")
                                         .onTapGesture {
                                             vm.day = "Wednesday"
                                             isBookindViewIsActive.toggle()
                                             print("profile")
                                         }
                                     
-                                    ProductCard(imageString: "VIP", textString: "Thursday")
+                                    ProductCard(imageString: "thursday", textString: "Thursday")
                                         .onTapGesture {
                                             vm.day = "Thursday"
                                             isBookindViewIsActive.toggle()
                                             print("profile")
                                         }
                                     
-                                    ProductCard(imageString: "VIP", textString: "Friday")
+                                    ProductCard(imageString: "friday", textString: "Friday")
                                         .onTapGesture {
                                             vm.day = "Friday"
                                             isBookindViewIsActive.toggle()

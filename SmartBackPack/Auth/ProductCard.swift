@@ -29,7 +29,7 @@ struct ProductCard: View {
             Image(imageString ?? "")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 100)
+                .frame(width: 50,height: 50)
                 .padding(.all, 20)
             
             VStack(alignment: .leading) {

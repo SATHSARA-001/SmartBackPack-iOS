@@ -10,24 +10,20 @@ import Foundation
 
 struct History: Codable {
     
-    var historyId: String?
-    var date : String?
-    var availabelBookList:[Subject]?
-    
-    
-    public init(historyId:String?,date: String?,availabelBookList:[Subject]?) {
+    var name: String?
+    var day:String?
+
+    public init(name:String?,day:String?) {
         
-        self.historyId = historyId
-        self.date = date
-        self.availabelBookList = availabelBookList
+        self.name = name
+        self.day = day
         
     }
     
     public enum CodingKeys: String, CodingKey {
         
-        case historyId = "historyId"
-        case date = "date"
-        case availabelBookList = "availabelBookList"
+        case name = "name"
+        case day = "day"
         
     }
     

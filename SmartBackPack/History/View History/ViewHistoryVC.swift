@@ -27,9 +27,9 @@ struct ViewHistoryVC: View {
                                 
                                 VStack(alignment:.leading,spacing:20){
                                     
-                                    Text(history?.date ?? "date")
-                                        .font(.system(size: 14, weight: .bold, design: .default))
-                                        .foregroundColor(.black)
+//                                    Text(history?.date ?? "Date")
+//                                        .font(.system(size: 14, weight: .bold, design: .default))
+//                                        .foregroundColor(.black)
                                     
                                     Text("Available Books")
                                         .font(.system(size: 14, weight: .bold, design: .default))
